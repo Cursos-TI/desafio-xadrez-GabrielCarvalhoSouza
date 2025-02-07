@@ -1,5 +1,19 @@
 #include <stdio.h>
 
+void rainhaRecursiva(int x) {
+    if (x > 0 ) {
+        rainhaRecursiva(x - 1);
+        printf("Esquerda\n");
+    }
+}
+
+void torreRecursiva(int x) {
+    if (x > 0 ) {
+        torreRecursiva(x - 1);
+        printf("Direita\n");
+    }
+}
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Implementação de Movimentação do Bispo
@@ -33,11 +47,35 @@ int main() {
     
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    // Implementação de Movimentação do Bispo Aninhado
+    printf("\nBispo Aninhado\n");
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 1; j++) {
+            printf("Cima, ");
+        }
+        printf("Direita\n");
+    }
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    // Implementação de Movimentação do Cavalo com estrutura complexa
+    printf("\nCavalo Complexo\n");
+    for (int i = 0, j = 0; i < 5; i++, j++) {
+        printf("Cima\n");
+        if (j == 1) {
+            printf("Direita\n");
+            break;
+        }
+    }
+
+    // Implementação de Movimentação da Rainha com Recursividade
+    printf("\nRainha Recursiva\n");
+    int qtd_rainha = 8;
+    rainhaRecursiva(qtd_rainha);
+
+    // Implementação de Movimentação da Torre com Recursividade
+    printf("\nTorre Recursiva\n");
+    int qtd_torre = 5;
+    torreRecursiva(qtd_torre);
+
 
     return 0;
 }
