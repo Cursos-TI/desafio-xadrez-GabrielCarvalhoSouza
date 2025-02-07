@@ -24,7 +24,7 @@ int main() {
     printf("\nCavalo\n");
     int j = 0;
     for (int i = 0; i < 1; i++) {
-        while (j < 3) {
+        while (j < 2) {
             printf("Baixo\n");
             j++;
         }
